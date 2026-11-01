@@ -4,13 +4,23 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 -- Buffers
-keymap("n", "<C-PageDown>", ":bn<CR>", opts)      -- Siguiente buffer
-keymap("n", "<C-PageUp>", ":bp<CR>", opts)        -- Buffer anterior
-keymap("i", "<C-PageDown>", "<Esc>:bn<CR>", opts) -- Siguiente buffer en modo insertar
-keymap("i", "<C-PageUp>", "<Esc>:bp<CR>", opts)   -- Buffer anterior en modo insertar
-keymap("n", "<leader><BS>", ":bd<CR>", opts)      -- Cerrar buffer
+keymap("n", "<Tab>",   ":BufferLineCycleNext<CR>", opts) -- Siguiente buffer
+keymap("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts) -- Buffer anterior
+keymap("i", "<Tab>", "<Esc>:BufferLineCycleNext<CR>", opts) -- Siguiente buffer en modo insertar
+keymap("i", "<S-Tab>", "<Esc>:BufferLineCyclePrev<CR>", opts)   -- Buffer anterior en modo insertar
+keymap("n", "<leader><Tab>", ":bd<CR>", opts)      -- Cerrar buffer
 keymap("n", "<C-s>", ":w<CR>", opts)              -- Guardar buffer
 keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)        -- Guardar buffer (insertar)
+-- En modo normal, presiona las teclas numéricas para saltar directamente al buffer de la posición correspondiente
+keymap("n", "<leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opts)
+keymap("n", "<leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>", opts)
+keymap("n", "<leader>3", "<Cmd>BufferLineGoToBuffer 3<CR>", opts)
+keymap("n", "<leader>4", "<Cmd>BufferLineGoToBuffer 4<CR>", opts)
+keymap("n", "<leader>5", "<Cmd>BufferLineGoToBuffer 5<CR>", opts)
+keymap("n", "<leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>", opts)
+keymap("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>", opts)
+keymap("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", opts)
+keymap("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", opts)
 
 -- General
 keymap("i", "jk", "<ESC>", opts)                     -- Volver a modo normal con jk
