@@ -1,9 +1,9 @@
 return {
   -- Import LSP plugins
-  --{ import = "plugins.lsp" },
+  { import = "plugins.lsp" },
 
   -- Import completion plugins
-  --{ import = "plugins.completion" },
+  { import = "plugins.completion" },
 
   -- Import formatting plugins
   --{ import = "plugins.formatting" },

@@ -1,5 +1,8 @@
 vim.g.mapleader = " " -- Tecla líder (barra espaciadora)
 
+-- Desactivar plegado al abrir archivos
+vim.opt.foldenable = false
+
 -- Números de línea
 vim.opt.number = true -- Muestra el número de línea absoluto
 

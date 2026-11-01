@@ -58,8 +58,8 @@ keymap("x", "<Up>", ":m '<-2<CR>gv=gv", opts)   -- Mover selección hacia arriba
 keymap("x", "<Down>", ":m '>+1<CR>gv=gv", opts) -- Mover selección hacia abajo
 
 -- LSP
-keymap("n", "gh", vim.lsp.buf.hover, opts)           -- Mostrar información flotante (hover)
-keymap("n", "gH", vim.diagnostic.open_float, opts)   -- Mostrar diagnóstico flotante
-keymap("n", "<F2>", vim.lsp.buf.rename, opts)        -- Renombrar símbolo
-keymap("n", "gd", vim.lsp.buf.definition, opts)      -- Ir a la definición
-keymap("n", "gy", vim.lsp.buf.type_definition, opts) -- Ir a la definición de tipo
+--keymap("n", "gh", vim.lsp.buf.hover, opts)           -- Mostrar información flotante (hover)
+--keymap("n", "gH", vim.diagnostic.open_float, opts)   -- Mostrar diagnóstico flotante
+--keymap("n", "<F2>", vim.lsp.buf.rename, opts)        -- Renombrar símbolo
+--keymap("n", "gd", vim.lsp.buf.definition, opts)      -- Ir a la definición
+--keymap("n", "gy", vim.lsp.buf.type_definition, opts) -- Ir a la definición de tipo
